@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  questdb:
+    build: .
+    container_name: questdb
+    ports:
+      - "9000:9000"
+      - "8812:8812"
+    volumes:
+      - questdb-data:/var/lib/questdb
+    environment:
+      - QDB_ROOT=/var/lib/questdb
+      - PATH=/var/lib/questdb/bin:$PATH
+
+volumes:
+  questdb-data:

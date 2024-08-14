@@ -1,0 +1,8 @@
+add_commit_push.sh
+.vscode
+venv/
+__pycache__
+techinfo/
+tech_info/
+tree.txt
+
